@@ -3,7 +3,7 @@ import os
 import sys
 
 
-tinify.key = ""
+tinify.key = "enter your api key here"
 
 
 path = raw_input("Enter directory address: ");
