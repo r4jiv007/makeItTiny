@@ -3,7 +3,7 @@ import os
 import sys
 
 
-tinify.key = "GsTvovEirnd4ru8LcPGzawVmmrY--VZn"
+tinify.key = "enter your tinify key here"
 
 
 path = raw_input("Enter directory address: ");
