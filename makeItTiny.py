@@ -3,7 +3,7 @@ import os
 import sys
 
 
-tinify.key = "enter your api key here"
+tinify.key = "GsTvovEirnd4ru8LcPGzawVmmrY--VZn"
 
 
 path = raw_input("Enter directory address: ");
@@ -17,9 +17,10 @@ fileList=os.listdir(path);
 
 print "compressing following files :- \n"
 for filename in fileList:
-    if filename.endswith('.jpg') or filename.endswith('.png') or filename.endswith('.jpeg') and '.9.' not in filename:
-        print "processing "+ filename+'\n'
-        source = tinify.from_file(os.path.join(path,filename))
-        source.to_file(os.path.join(path,filename))
+    if filename.endswith('.jpg') or filename.endswith('.png') or filename.endswith('.jpeg') :
+        if  not  filename.endswith('.9.png'):
+            print "processing "+ filename+'\n'
+            source = tinify.from_file(os.path.join(path,filename))
+            source.to_file(os.path.join(path,filename))
 
 print "processing finished...."
