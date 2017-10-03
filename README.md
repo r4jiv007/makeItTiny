@@ -5,6 +5,10 @@ very simple and crude python script based on tinypng api, it compresses jpg and 
 make sure you install tinify
 pip install --upgrade tinify
 
+then generate your Api key from here :- https://tinypng.com/developers
+
+Edit the python script and place your api key
+
 run the scrypt using following command:=
 python makeItTiny.py
 
