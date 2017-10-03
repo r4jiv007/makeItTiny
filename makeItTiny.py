@@ -3,6 +3,13 @@ import tinify
 import os
 import sys
 
+def makeItTiny(*filePath):
+	for filename in filePath:
+    if filename.endswith('.jpg') or filename.endswith('.png') or filename.endswith('.jpeg') :
+        if  not  filename.endswith('.9.png'):
+            print "processing "+ filename+'\n'
+            source = tinify.from_file(filename)
+            source.to_file(filename)
 
 tinify.key ="enter your api key here"
 
@@ -24,11 +31,7 @@ for folder, subs, files in os.walk(path):
 # print filePath
 
 print "compressing following files :- \n"
-for filename in filePath:
-    if filename.endswith('.jpg') or filename.endswith('.png') or filename.endswith('.jpeg') :
-        if  not  filename.endswith('.9.png'):
-            print "processing "+ filename+'\n'
-            source = tinify.from_file(filename)
-            source.to_file(filename)
+
+makeItTiny(filePath)
 
 print "processing finished...."
