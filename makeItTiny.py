@@ -3,15 +3,21 @@ import tinify
 import os
 import sys
 
+
+tinify.key ="enter your api key here"
+
 def makeItTiny(*filePath):
 	for filename in filePath:
     if filename.endswith('.jpg') or filename.endswith('.png') or filename.endswith('.jpeg') :
         if  not  filename.endswith('.9.png'):
-            print "processing "+ filename+'\n'
-            source = tinify.from_file(filename)
-            source.to_file(filename)
+           try: 
+           	print "processing "+ filename+'\n'
+           	source = tinify.from_file(filename)
+           	source.to_file(filename)
+           	filePath.re
+           except:
 
-tinify.key ="enter your api key here"
+
 
 
 path = raw_input("Enter directory address: ");
